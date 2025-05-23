@@ -34,13 +34,14 @@ nav ul li a {
 
 
 .imagen-inicio {
-  max-width: 100%;
-  width: 1000px;     /* Aumentá este valor si querés más grande */
+  width: 100%;
+  max-width: 1000px; /* Se agranda hasta este valor máximo */
   height: auto;
   display: block;
   margin: 0 auto;
-  border-radius: 10px; /* Opcional: bordes redondeados */
+  border-radius: 10px;
 }
+
 
 
 section {
@@ -149,9 +150,10 @@ footer {
 }
 
 @media (max-width: 600px) {
-  img {
+  
+  .imagen-inicio {
     max-width: 100%;
-    height: auto;
+    border-radius: 0;
   }
 
   nav ul {
