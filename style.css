@@ -1,0 +1,187 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #06D001;
+  color: #000000;
+  padding: 20px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none; /* Elimina viñetas */
+  padding: 0; /* Elimina relleno */
+  display: flex; /* Activa Flexbox */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  gap: 10px; /* Espacio entre los ítems de la lista */
+}
+
+nav ul li a {
+  color: #000000;
+  /*text-decoration: none;     /* Sin subrayado */
+  font-weight: bold; /* Negrita */
+}
+
+section {
+  padding: 20px; /* Espacio interior */
+  text-align: center; /* Centra el texto */
+}
+
+figure {
+  text-align: center;      /* Centra imagen y texto */
+  margin: 20px 0;
+}
+
+figcaption {
+  font-size: 0.9em;
+  color: #000000;
+  margin-top: 5px;
+}
+
+img {
+  width: 600px;
+  height: 400px;
+}
+
+#nosotros {
+  text-align: center; 
+  padding: 100px;
+}
+
+#nosotros p {
+  width: 30%; 
+  margin: 0 auto; 
+  text-align: justify; 
+}
+
+.trabajos-container {
+  display: flex; /* Activa Flexbox */
+  justify-content: center; /* Centra horizontalmente */
+  gap: 20px; /* Espacio entre productos */
+  flex-wrap: wrap; /* Permite que bajen a otra línea en pantallas pequeñas */
+  margin-top: 20px; /* Espacio superior */
+}
+
+.trabajo {
+  text-align: center;
+}
+
+.trabajo img {
+  width: 150px; /* Ancho fijo */
+  height: 150px; /* Alto fijo */
+  object-fit: cover; /* Cubre el área sin deformarse */
+}
+
+form {
+  display: flex; /* Activa Flexbox */
+  flex-direction: column; /* Coloca los elementos en columna */
+  gap: 15px; /* Espacio entre campos */
+  max-width: 400px; /* Ancho máximo */
+  margin: 0 auto; /* Centrado horizontal */
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espacio entre label e input */
+}
+
+.form-row label {
+  width: 70px; /* Ajusta el ancho como necesites */
+  text-align: left;
+}
+
+.form-row input {
+  flex: 1; /* Hace que el input ocupe el resto del espacio */
+}
+
+input,
+textarea {
+  padding: 10px; /* Espacio interior */
+  border: 1px solid #ccc; /* Borde gris claro */
+  border-radius: 4px; /* Bordes redondeados */
+}
+
+button {
+  padding: 10px; /* Espacio interior */
+  background-color: #06D001; /* Fondo verde */
+  color: white; /* Texto blanco */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+footer {
+  background-color: #333; /* Fondo oscuro */
+  color: white; /* Texto blanco */
+  text-align: center; /* Centrado de texto */
+  padding: 15px; /* Espacio interior */
+  margin-top: 30px; /* Separación del contenido anterior */
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column; /* Muestra los enlaces uno debajo del otro */
+    gap: 10px; /* Menor espacio entre ellos */
+  }
+
+  .productos-container {
+    flex-direction: column; /* Apila los productos en una columna */
+    align-items: center; /* Centra verticalmente */
+  }
+
+  .form-row {
+    flex-direction: column;
+    align-items: flex-start; /* Alinea a la izquierda en columna */
+  }
+
+  .form-row label {
+    width: auto; /* El label se ajusta al contenido */
+    text-align: left;
+  }
+
+  .form-row input {
+    width: 100%; /* Input ocupa todo el ancho disponible */
+  }
+}
+
+/* -------- Tablets (601px a 1024px) -------- */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .productos-container {
+    justify-content: space-evenly; /* Distribuye los productos uniformemente */
+  }
+  .form-row {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .form-row label {
+    width: 70px;
+  }
+
+  .form-row input {
+    flex: 1;
+  }
+}
+
+/* -------- PCs (más de 1024px) -------- */
+@media (min-width: 1025px) {
+  .productos-container {
+    justify-content: space-between; /* Aumenta el espacio entre productos */
+  }
+
+  .form-row {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .form-row label {
+    width: 70px;
+  }
+
+  .form-row input {
+    flex: 1;
+  }
+}
