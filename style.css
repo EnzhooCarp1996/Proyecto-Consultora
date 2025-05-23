@@ -7,12 +7,12 @@ body {
 header {
   background-color: #06D001;
   color: #000000;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
 }
 
 nav ul {
-  list-style: none; /* Elimina viñetas */
+  list-style: none; 
   padding: 0; /* Elimina relleno */
   display: flex; /* Activa Flexbox */
   justify-content: center; /* Centra los elementos horizontalmente */
@@ -25,10 +25,31 @@ nav ul li a {
   font-weight: bold; /* Negrita */
 }
 
-section {
-  padding: 20px; /* Espacio interior */
-  text-align: center; /* Centra el texto */
+#inicio {
+  width: 100%;
+  padding: 40px 20px;
+  text-align: center;
+  box-sizing: border-box;
 }
+
+
+.imagen-inicio {
+  max-width: 100%;
+  width: 1000px;     /* Aumentá este valor si querés más grande */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px; /* Opcional: bordes redondeados */
+}
+
+
+section {
+  padding: 50px;
+  text-align: center;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
 
 figure {
   text-align: center;      /* Centra imagen y texto */
@@ -42,19 +63,25 @@ figcaption {
 }
 
 img {
-  width: 600px;
-  height: 400px;
+  max-width: 100%; /* Se adapta al ancho del contenedor */
+  height: auto;    /* Mantiene la proporción */
+  display: block;  /* Elimina el espacio debajo de la imagen */
+  margin: 0 auto;  /* Centra la imagen si el contenedor lo permite */
 }
 
 #nosotros {
-  text-align: center; 
-  padding: 100px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 #nosotros p {
-  width: 30%; 
-  margin: 0 auto; 
-  text-align: justify; 
+  margin-top: 20px;
+  text-align: justify;
+  line-height: 1.6;
+  font-size: 1.1rem;
 }
 
 .trabajos-container {
@@ -122,6 +149,11 @@ footer {
 }
 
 @media (max-width: 600px) {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
   nav ul {
     flex-direction: column; /* Muestra los enlaces uno debajo del otro */
     gap: 10px; /* Menor espacio entre ellos */
